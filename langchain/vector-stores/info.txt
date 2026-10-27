@@ -1,0 +1,32 @@
+in websites where we get recommendations , for movie recommendations , lets say someone searches Krrish
+we need to show superheroes movies in recommendations right , HOW DO WE DO THAT?
+
+we will check the description of krrish and see which movies' descriptions are close to this
+
+convert krrish info to vector embeddings and compare with other movies' embeddings.
+
+we store the other movie embedding in a store called vector store.
+
+vectors can be stored in vector store in memory (RAM) or on disk (HARDDRIVE)
+
+HOW DO WE SEARCH FAST??
+lets say vector store has 10 lakhs vector , and we have one query vector
+do we compare that one vector to each of the 10 lakh vector??
+
+NO --> WE WILL USE INDEXING
+
+one of the indexing techniques is clustering.
+
+will cluster similar vectors , say we got 10 clusters.
+
+take avg of each cluster.
+we will have 10 averages.
+
+highest cosine similarity with query vector and avg vector , choose that particular cluster.
+
+once the cluster is chosen , make comparison with the query vector vs vectors in that cluster.
+
+VECTOR STORE provied storage + retrievel features
+
+VECTOR DBs provide more features on top of vector stores like in normal dbs , ACID transactions , concurrency control , etc
+

@@ -1,0 +1,3 @@
+converts all types of document info into DOCUMENT OBJECT.
+if we get info from PDF ,converts it to document OBJECT ,
+document_loaders can deal with many formats like pdf , txt , etc.

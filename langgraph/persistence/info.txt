@@ -1,0 +1,11 @@
+Persistence store the state of the workflow in the RAM or databse.
+It does not only store the final state but also intermediate states.
+The issue with a workflow is , once we invoke that workflow , it runs from START node till END node , and once we reach the END node the state perishes , to save this state we use persistence.
+But rather than storing only final states at the end of the workflow , persistence also stores the intermediate states.
+Suppose we have this workflow .... START --> NODE1 --> NODE2 --> END
+state : { name : "swaraj" } , this is our state at the START.
+suppose at NODE1 we did return {name : "yuvraj" }
+then suppose at NODE2 we did return {name : "shravani"}
+and then we reach the end.
+so persistence stores all the intermediate states , not only the final state.
+it has the value of state at START , state at NODE1 and also state at NODE2

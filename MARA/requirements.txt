@@ -1,0 +1,9 @@
+arxiv
+langgraph
+langchain-community
+langchain-groq
+langchain-core
+langchain-classic
+pypdf
+requests
+python-dotenv

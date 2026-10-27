@@ -1,0 +1,15 @@
+suppose we want to make a system where we send the LLM a topic and then we get a detailed report of it.
+after getting the report , we send the report again to get the summary in 5 lines.
+
+topic --> LLM --> detailed report --> LLM --> 5 lines of summary
+
+
+without parser we would go this by doing , 
+1-> prompting LLM then getting result.content ,
+2-> set another template for 5 lines of summary and then get result.content
+
+
+with parser we can simply make chains
+
+chain = template1 | model | parser | template2 | model | parser
+

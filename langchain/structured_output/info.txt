@@ -1,0 +1,16 @@
+instead of getting simple text from LLMs , if we get structured output from LLMs , 
+such as JSON , it can have many usecases further .
+There are 2 types of LLMs , one which can give structured output if its asked to in the prompt and one which cannot.
+
+for the first category we should use with_structured_output function in langchain
+for the second category we use output parsers.
+
+
+WITH structured output :-
+we can format in 3 types :-
+1 -> TypedDict
+2 -> Pydantic
+3 -> JSON
+
+
+Using .with_structured_output(schema) does not change how the model “thinks” or reasons — it only changes how the final output is formatted. Everything else (context understanding, reasoning, knowledge) stays the same.
